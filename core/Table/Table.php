@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Table;
+namespace Core\Table;
+
+use Core\Database\Database;
 
 class Table
 {
     protected $table;
     protected $db;
 
-    public function __construct(\App\Database $db)
+    public function __construct(Database $db)
     {
         $this->db = $db;
         if (is_null($this->table)) {
@@ -17,7 +19,8 @@ class Table
         }
     }
 
-    public function query($statement)
+    public function all()
     {
+        //return $this->db->query('SELECT * FROM articles');
     }
 }

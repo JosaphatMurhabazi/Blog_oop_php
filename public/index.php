@@ -1,5 +1,10 @@
 <?php
+define('ROOT', dirname(__DIR__));
 
-require '../app/Autoloader.php';
-\App\Autoloader::register();
-var_dump(App\App::getTable('Posts'));
+require ROOT . '/app/App.php';
+
+App::load();
+
+$app = App::getInstance();
+$post = $app->getTable('Posts');
+var_dump($post->all());
