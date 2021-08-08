@@ -1,6 +1,8 @@
 <?php
 
-namespace Tutoriel\HTML;
+namespace App\HTML;
+
+use App\HTML\Form;
 
 class BootstrapForm extends Form
 {

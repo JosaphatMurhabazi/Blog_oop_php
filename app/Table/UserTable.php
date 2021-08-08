@@ -4,6 +4,6 @@ namespace App\Table;
 
 use Core\Table\Table;
 
-class PostsTable extends Table
+class UserTable extends Table
 {
 }

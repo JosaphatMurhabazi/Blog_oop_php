@@ -30,7 +30,6 @@ class MysqlDatabase extends Database
         return $this->pdo;
     }
 
-
     public function query($statement, $class_name = null, $one = false)
     {
         $req = $this->getPdo()->query($statement);
@@ -46,6 +45,7 @@ class MysqlDatabase extends Database
         }
         return $data;
     }
+
     public function prepare($statement, $attributes, $class_name, $one = false)
     {
         $req = $this->getPdo()->prepare($statement);

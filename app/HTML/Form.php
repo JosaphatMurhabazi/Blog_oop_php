@@ -1,6 +1,6 @@
 <?php
 
-namespace Tutoriel\HTML;
+namespace App\HTML;
 
 use DateTime;
 

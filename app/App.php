@@ -17,6 +17,16 @@ class App
         return self::$_instance;
     }
 
+    public static function load()
+    {
+        session_start();
+        require ROOT . '/app/Autoloader.php';
+        App\Autoloader::register();
+
+        require ROOT . '/core/Autoloader.php';
+        Core\Autoloader::register();
+    }
+
     public function getTable($name)
     {
         $class_name = '\\App\\Table\\' . ucfirst($name) . 'Table';
@@ -30,15 +40,5 @@ class App
             return new MysqlDatabase($config->get('db_name'), $config->get('db_user'), $config->get('db_pass'), $config->get('db_host'));
         }
         return $this->db_instance;
-    }
-
-    public static function load()
-    {
-        session_start();
-        require ROOT . '/app/Autoloader.php';
-        App\Autoloader::register();
-
-        require ROOT . '/core/Autoloader.php';
-        Core\Autoloader::register();
     }
 }

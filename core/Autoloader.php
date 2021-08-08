@@ -4,6 +4,10 @@ namespace Core;
 
 class Autoloader
 {
+    static function register()
+    {
+        spl_autoload_register(array(__CLASS__, 'autoload'));
+    }
     static function autoload($class_name)
     {
         if (strpos($class_name, __NAMESPACE__ . '\\') == 0) {
@@ -11,10 +15,5 @@ class Autoloader
             $class_name = str_replace('\\', '/', $class_name);
             require __DIR__ . '/' . $class_name . '.php';
         }
-    }
-
-    static function register()
-    {
-        spl_autoload_register(array(__CLASS__, 'autoload'));
     }
 }
