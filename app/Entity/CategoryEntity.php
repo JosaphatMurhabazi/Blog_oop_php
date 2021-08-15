@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use Core\Entinty\Entity;
+use Core\Entity\Entity;
 
 class categoryEntity extends Entity
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Entinty;
+namespace Core\Entity;
 
 class Entity
 {
