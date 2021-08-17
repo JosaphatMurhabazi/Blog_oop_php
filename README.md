@@ -1,3 +1,3 @@
 #Improving your skills in PHP Object Oriented Programming
-# Josaphat MURHABAZI
-# Web developer
+#Josaphat MURHABAZI
+#Web developer
